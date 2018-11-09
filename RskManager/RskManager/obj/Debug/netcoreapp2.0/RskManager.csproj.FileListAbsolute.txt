@@ -1,0 +1,11 @@
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/bin/Debug/netcoreapp2.0/RskManager.deps.json
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/bin/Debug/netcoreapp2.0/RskManager.runtimeconfig.json
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/bin/Debug/netcoreapp2.0/RskManager.runtimeconfig.dev.json
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/bin/Debug/netcoreapp2.0/RskManager.dll
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/bin/Debug/netcoreapp2.0/RskManager.pdb
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/obj/Debug/netcoreapp2.0/RskManager.csprojResolveAssemblyReference.cache
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/obj/Debug/netcoreapp2.0/RskManager.csproj.CoreCompileInputs.cache
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/obj/Debug/netcoreapp2.0/RskManager.AssemblyInfoInputs.cache
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/obj/Debug/netcoreapp2.0/RskManager.AssemblyInfo.cs
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/obj/Debug/netcoreapp2.0/RskManager.dll
+/Users/sebastian/Desktop/DEMO/RskManager/Superville.RskManager/obj/Debug/netcoreapp2.0/RskManager.pdb
