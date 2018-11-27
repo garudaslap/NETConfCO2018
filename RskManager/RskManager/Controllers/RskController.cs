@@ -36,7 +36,7 @@ namespace RskManager.Controllers
 		{
 			try
             {
-				var result = Web3Client.Eth.Blocks.GetBlockNumber;
+                var result = Web3Client.Eth.Blocks.GetBlockNumber.SendRequestAsync();
                 return Json(result);
             }
             catch (Exception ex)
@@ -182,12 +182,18 @@ namespace RskManager.Controllers
                     //new HexBigInteger(0x300000)
                     //gasPrice = 0x0
                     //value = 0x0
+                    var gas = await Web3Client.Eth.DeployContract.EstimateGasAsync(deployContractModel.Abi,
+                                                                                   deployContractModel.Bytecode,
+                                                                                   deployContractModel.SenderAddress,
+                                                                                   null);
+
                     var w = new Web3(new Account(deployContractModel.SenderPrivateKey), NodeUrl);
+
                     var txHash = await w.Eth.DeployContract
                                         .SendRequestAsync(deployContractModel.Abi,
                                                           deployContractModel.Bytecode,
                                                           deployContractModel.SenderAddress,
-                                                          new HexBigInteger(deployContractModel.Gas),
+                                                          gas,
                                                           new HexBigInteger(deployContractModel.GasPrice),
                                                           new HexBigInteger(deployContractModel.Value));
                     return Json(txHash);

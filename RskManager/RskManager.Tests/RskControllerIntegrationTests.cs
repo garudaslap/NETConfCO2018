@@ -38,6 +38,18 @@ namespace RskManager.Tests
         }
 
         [Fact]
+        public async Task GetBlockNumberTest()
+        {
+            var response = await _client.GetAsync("api/rsk/getBlockNumber");
+
+            // Assert
+            response.EnsureSuccessStatusCode();
+            var responseString = await response.Content.ReadAsStringAsync();
+            var blockNumber = JsonConvert.DeserializeObject<IEnumerable<string>>(responseString);
+            blockNumber.Count().Should().Be(1000);
+        }
+
+        [Fact]
         public async Task GetAccountsTest()
         {
             var response = await _client.GetAsync("api/rsk/getAccounts");
@@ -127,7 +139,7 @@ namespace RskManager.Tests
         [Fact]
         public async Task CheckNewBalanceOfCreatedAccountTest()
         {
-            var response = await _client.GetAsync(string.Format("api/rsk/balance?address={0}", "0x458Fd4670A28944b2077ced78BFc684DD2035809"));
+            var response = await _client.GetAsync(string.Format("api/rsk/balance?address={0}", TestSettings.NewAccountAddress));
 
             // Assert
             response.EnsureSuccessStatusCode();
@@ -168,7 +180,7 @@ namespace RskManager.Tests
         [Fact]
         public async Task GetContractAddress()
         {
-            var response = await _client.GetAsync(string.Format("api/rsk/GetContractAddress?txHash={0}", "0x5c9a176853d948afde3d1ccc1d39925bec399165240896ac37a6aa35de913c40"));
+            var response = await _client.GetAsync(string.Format("api/rsk/GetContractAddress?txHash={0}", TestSettings.ContractTxHash));
 
             // Assert
             response.EnsureSuccessStatusCode();

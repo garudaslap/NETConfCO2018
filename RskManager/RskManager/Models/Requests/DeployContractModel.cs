@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Nethereum.Hex.HexTypes;
 
 namespace RskManager.Models.Requests
 {    

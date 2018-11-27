@@ -17,9 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Superville.RskManager\RskManager.csproj" />
+    <Compile Remove="TestCaseOrdering\TestCollectionOrderer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="TestCaseOrdering\TestCollectionOrderer.cs" />
+    <ProjectReference Include="..\RskManager\RskManager.csproj" />
   </ItemGroup>
 </Project>
